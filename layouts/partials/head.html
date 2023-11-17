@@ -55,4 +55,6 @@
     {{ with .OutputFormats.Get "json" }}
     <link href="{{ .RelPermalink }}" rel="alternate" type="application/json" title="{{ $.Site.Title }}" />
     {{ end }}
+
+    {{ partial "faro-analytics/assets/js" . }}
 </head>
