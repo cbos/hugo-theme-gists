@@ -15,7 +15,7 @@
       ( <strong>{{ len .Pages }}</strong>
       results
       for <strong>{{ .Params.title }}</strong> )
-      <a class="btn btn-sm btn-outline-primary text-decoration-none" href="{{ .Site.BaseURL }}/tags/"> Clear filter</a>
+      <a class="btn btn-sm btn-outline-primary text-decoration-none" href='{{ absURL "/" }}tags/'> Clear filter</a>
     </div>
   </div>
 
