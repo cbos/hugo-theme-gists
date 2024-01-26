@@ -66,7 +66,13 @@ path { fill: var(--bs-tertiary-color) }
 .markdown-body blockquote {
     padding: 0 1em;
     color: var(--bs-secondary);
-    border-left: .25em solid var(--color-markdown-blockquote-border)
+    border-left: .25em solid var(--color-markdown-blockquote-border);
+    font-style: italic;
+}
+
+.markdown-body blockquote strong {
+    font-weight: bolder;
+    text-decoration: underline;
 }
 
 .markdown-body blockquote>:first-child {
