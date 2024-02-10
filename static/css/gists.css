@@ -223,3 +223,64 @@ path { fill: var(--bs-tertiary-color) }
 .markdown-body img[align=left] {
     padding-right: 20px
 }
+
+.user-card-avatar {
+    position: relative;
+    z-index: unset !important;
+    text-align: center;
+}
+
+.avatar-flair {
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-repeat: no-repeat;
+    background-position: center;
+    position: absolute;
+    bottom: 0;
+    right: 0px;
+}
+
+@media screen and (max-width: 400px) {
+
+    .avatar-flair {
+        visibility: hidden;
+    }
+}
+
+@media screen and (max-width: 600px) {
+
+    .avatar-flair {
+        background-size: 30px 30px;
+        width: 30px;
+        height: 30px;
+    }
+}
+
+@media screen and (min-width: 600px) {
+
+    .avatar-flair {
+        background-size: 40px 40px;
+        width: 40px;
+        height: 40px;
+    }
+}
+
+@media screen and (min-width: 800px) {
+
+    .avatar-flair {
+        background-size: 60px 60px;
+        width: 60px;
+        height: 60px;
+    }
+}
+
+@media screen and (min-width: 1000px) {
+
+    .avatar-flair {
+        right: 25px;
+    }
+}
+
+

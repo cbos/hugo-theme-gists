@@ -16,9 +16,12 @@
 
           <div class="pt-2 pe-2 col-3 col-sm-12 order-sm-2 order-1">
             {{ with $.Site.Params.avatar }}
+            <div class="user-card-avatar">
               <a href="{{ $.Site.Params.avatar }}">
                 <img width="250" class="img-thumbnail rounded-pill border bg-white" src="{{ $.Site.Params.avatar }}">
               </a>
+              <div class="avatar-flair" style="background-image: url({{ "images/champion.png" | absURL }});" title="community-champions"></div>
+            </div>
             {{ end }}
           </div>
         </div>
@@ -49,6 +52,8 @@
           {{ if .Site.Params.rss }}
             <a style="margin: 0 10px 10px 0;" href="{{ "index.xml" | absURL }}"><img alt="@rss" width="32" height="32" src="{{ "images/rss.png" | absURL }}"></a>
           {{ end }}
+          <a style="margin: 0 10px 10px 0;" href="https://grafana.com/community/champions/"><img alt="Grafana Champions information" width="32" height="32" src="{{ "images/champion.png" | absURL }}"></a>
+
         </div>
       </div>
     </div>
