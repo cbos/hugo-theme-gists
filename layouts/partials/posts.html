@@ -13,7 +13,16 @@
             </div>
 
             <div class="col-12 d-inline-block text-secondary">
-              <p class="fw-light">{{ .Summary | safeHTML }}</p>
+              <p class="fw-light">
+              {{- $images := partial "_funcs/get-page-images" . }}
+              {{- with index $images 0 }}
+                {{- with .Image }}
+                  {{ with .Process "resize 1100x crop 1200x630 center webp" }}
+                    <img src="{{ .RelPermalink }}" width="400" height="210" class="rounded float-end">
+                  {{- end }}
+                {{- end }}
+              {{- end }}
+                {{ .Summary | safeHTML }}</p>
             </div>
 
             <div>

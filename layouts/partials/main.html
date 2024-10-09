@@ -4,9 +4,9 @@
 {{ $tags_count := len .Site.Taxonomies.tags }}
 {{ $pin_count := len $section_pin }}
 
-<div class="container-xl">
-  <div class="d-flex flex-sm-row flex-column">
-    <div class="p-2 pt-0 col-sm-3">
+<div class="container-xxl">
+  <div class="d-flex flex-lg-row flex-column">
+    <div class="p-2 pt-0 col-md-3">
       <div class="d-flex flex-column sticky-top ">
         <div class="d-flex flex-sm-column ">
           <div class="pt-3 pt-md-2 pb-2 order-sm-1 order-2">
@@ -58,7 +58,7 @@
       </div>
     </div>
 
-    <div class="p-2 pt-0 col-sm-9">
+    <div class="p-2 pt-0 col-md-10">
       <ul class="nav nav-underline sticky-top d-flex pt-2 mb-md-4 bg-white border-bottom">
         <li class="nav-item px-md-1">
           <a class="nav-link {{ if .IsHome  }} text-dark active {{ else }} text-dark-emphasis {{ end }}" href='{{ absURL "/" }}'>
