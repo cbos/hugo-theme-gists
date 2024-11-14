@@ -55,7 +55,9 @@
             <a style="margin: 0 10px 10px 0;" href="{{ "index.xml" | absURL }}"><img alt="@rss" width="32" height="32" src="{{ "images/rss.png" | absURL }}"></a>
           {{ end }}
           <a style="margin: 0 10px 10px 0;" href="https://grafana.com/community/champions/"><img alt="Grafana Champions information" width="32" height="32" src="{{ "images/champion.png" | absURL }}"></a>
-
+          {{ if .Site.Params.sessionize }}
+          <a style="margin: 0 10px 10px 0;" href="{{ .Site.Params.sessionize }}"><img alt="Spreaker profile at Sessionize" width="32" height="32" src="{{ "images/sessionize.png" | absURL }}"></a>
+          {{ end }}
         </div>
       </div>
     </div>
