@@ -13,7 +13,7 @@
                 </ul>
             </div>
             <div class="flex-fill text-secondary fs-7">
-                <relative-time datetime="{{ .PublishDate.Format "Mon, 02 Jan 2006 15:04:05 -0700" }}" ></relative-time>
+                {{ .Params.Conference.Date }}
             </div>
             <div class="pe-2 d-none d-md-block">
                 {{ with .Params.tags }}
