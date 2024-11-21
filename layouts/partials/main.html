@@ -58,6 +58,9 @@
           {{ if .Site.Params.sessionize }}
           <a style="margin: 0 10px 10px 0;" href="{{ .Site.Params.sessionize }}"><img alt="Spreaker profile at Sessionize" width="32" height="32" src="{{ "images/sessionize.png" | absURL }}"></a>
           {{ end }}
+          {{ if .Site.Params.bluesky }}
+          <a style="margin: 0 10px 10px 0;" href="{{ .Site.Params.bluesky }}"><img alt="@bluesky" width="32" height="32" src="{{ "images/bluesky.png" | absURL }}"></a>
+          {{ end }}
         </div>
       </div>
     </div>
