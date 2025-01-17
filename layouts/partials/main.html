@@ -46,20 +46,23 @@
         </div>
         <div class="pt-3 pb-4">
           {{ if .Site.Params.github}}
-            <a style="margin: 0 10px 10px 0;" href="https://github.com/{{ .Site.Params.github }}"><img alt="@github" width="32" height="32" src="{{ "images/github.png" | absURL }}"></a>
+            <a style="margin: 0 5px 5px 0;" href="https://github.com/{{ .Site.Params.github }}"><img alt="@github" width="32" height="32" src="{{ "images/github.png" | absURL }}"></a>
           {{ end }}
           {{ if .Site.Params.mastodon }}
-            <a style="margin: 0 10px 10px 0;" rel="me" href="{{ .Site.Params.mastodon }}"><img alt="@mastodon" width="32" height="32" src="{{ "images/mastodon.png" | absURL }}"></a>
+            <a style="margin: 0 5px 5px 0;" rel="me" href="{{ .Site.Params.mastodon }}"><img alt="@mastodon" width="32" height="32" src="{{ "images/mastodon.png" | absURL }}"></a>
           {{ end }}
           {{ if .Site.Params.rss }}
-            <a style="margin: 0 10px 10px 0;" href="{{ "index.xml" | absURL }}"><img alt="@rss" width="32" height="32" src="{{ "images/rss.png" | absURL }}"></a>
+            <a style="margin: 0 5px 5px 0;" href="{{ "index.xml" | absURL }}"><img alt="@rss" width="32" height="32" src="{{ "images/rss.png" | absURL }}"></a>
           {{ end }}
-          <a style="margin: 0 10px 10px 0;" href="https://grafana.com/community/champions/"><img alt="Grafana Champions information" width="32" height="32" src="{{ "images/champion.png" | absURL }}"></a>
+          <a style="margin: 0 5px 5px 0;" href="https://grafana.com/community/champions/"><img alt="Grafana Champions information" width="32" height="32" src="{{ "images/champion.png" | absURL }}"></a>
           {{ if .Site.Params.sessionize }}
-          <a style="margin: 0 10px 10px 0;" href="{{ .Site.Params.sessionize }}"><img alt="Spreaker profile at Sessionize" width="32" height="32" src="{{ "images/sessionize.png" | absURL }}"></a>
+          <a style="margin: 0 5px 5px 0;" href="{{ .Site.Params.sessionize }}"><img alt="Spreaker profile at Sessionize" width="32" height="32" src="{{ "images/sessionize.png" | absURL }}"></a>
           {{ end }}
           {{ if .Site.Params.bluesky }}
-          <a style="margin: 0 10px 10px 0;" href="{{ .Site.Params.bluesky }}"><img alt="@bluesky" width="32" height="32" src="{{ "images/bluesky.png" | absURL }}"></a>
+          <a style="margin: 0 5px 5px 0;" href="{{ .Site.Params.bluesky }}"><img alt="@bluesky" width="32" height="32" src="{{ "images/bluesky.png" | absURL }}"></a>
+          {{ end }}
+          {{ if .Site.Params.linkedin }}
+          <a style="margin: 0 5px 5px 0;" href="{{ .Site.Params.linkedin }}"><img alt="LinkedIn" width="32" height="32" src="{{ "images/linkedin.png" | absURL }}"></a>
           {{ end }}
         </div>
       </div>
