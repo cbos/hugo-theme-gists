@@ -19,6 +19,16 @@
     <meta name="keywords"
           content='{{ with .Params.Keywords }}{{ delimit . ", " }}{{ else }}{{ $.Site.Params.Keywords }}{{ end }}' />
     <meta name="robots" content="index,follow" />
+    {{ $goatUrl := cond (hugo.IsProduction) site.Params.goatcounter.prod_url site.Params.goatcounter.dev_url }}
+    {{ $faroEndpoint := site.Params.faro_analytics.endpoint }}
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; connect-src 'self' {{ $goatUrl }}/count {{ $faroEndpoint }}; font-src 'self' https://cdn.jsdelivr.net; form-action 'self'; base-uri 'self'; frame-ancestors 'none'; img-src 'self' https://to.ceesbos.nl; object-src 'none'; script-src 'self' 'unsafe-inline' https://unpkg.com/ https://cdn.jsdelivr.net {{ $goatUrl }} https://giscus.app; style-src 'self' 'unsafe-inline' https://cdn.jsdelivr.net https://giscus.app;">
+    <script>
+        window.goatcounter = {
+            allow_local: true
+        }
+    </script>
+    <script data-goatcounter="{{ $goatUrl }}/count"
+            async src="{{ $goatUrl }}/count.js"></script>
     <link rel="canonical" href="{{ .Permalink }}" />
 
     <!-- Twitter Card -->
