@@ -22,7 +22,7 @@
     {{ $goatUrl := cond (hugo.IsProduction) site.Params.goatcounter.prod_url site.Params.goatcounter.dev_url }}
     {{ $gotoUrl := cond (hugo.IsProduction) site.Params.goto.prod_url site.Params.goto.dev_url }}
     {{ $faroEndpoint := site.Params.faro_analytics.endpoint }}
-    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; frame-src 'self' https://www.youtube.com https://www.slideshare.net; connect-src 'self' {{ $goatUrl }}/count {{ $faroEndpoint }}; font-src 'self' https://cdn.jsdelivr.net; form-action 'self'; base-uri 'self'; frame-ancestors 'none'; img-src 'self' {{ $goatUrl }} {{ $gotoUrl }}; object-src 'none'; script-src 'self' 'unsafe-inline' https://unpkg.com/ https://cdn.jsdelivr.net {{ $goatUrl }} https://giscus.app; style-src 'self' 'unsafe-inline' https://cdn.jsdelivr.net https://giscus.app;">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; frame-src 'self' https://www.youtube.com https://www.slideshare.net https://giscus.app; connect-src 'self' {{ $goatUrl }}/count {{ $faroEndpoint }}; font-src 'self' https://cdn.jsdelivr.net; form-action 'self'; base-uri 'self'; frame-ancestors 'none'; img-src 'self' {{ $goatUrl }} {{ $gotoUrl }}; object-src 'none'; script-src 'self' 'unsafe-inline' https://unpkg.com/ https://cdn.jsdelivr.net {{ $goatUrl }} https://giscus.app; style-src 'self' 'unsafe-inline' https://cdn.jsdelivr.net https://giscus.app;">
     <script>
         window.goatcounter = {
             allow_local: true
